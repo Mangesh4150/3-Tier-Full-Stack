@@ -36,7 +36,7 @@ pipeline {
 
         stage('sonarqube analysis') {
             steps {
-                withSonarQubeEnv('SonarQube') {
+                withSonarQubeEnv('sonar') {
                     sh '''
                         ${SCANNER_HOME}/bin/sonar-scanner \
                         -Dsonar.projectKey=3-Tier-Full-Stack \
